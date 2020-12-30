@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(90, 90, 90);
+}
+
+.container {
+    position: relative;
+    max-width: 1110px;
+    height: 700px;
+    border-radius: 10px;
+    margin: 0 80px;
+    display: grid;
+    grid-template-columns: minmax(560px, 1fr) 1fr;
+    background: #ffffff;
+}
+
+/* ----------------- lado esquerdo
+ ----------------- */
+.lado_esquerdo {
+    position: relative;
+    height: 700px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    background: rgb(121, 1, 1);
+}
+
+.lado_esquerdo .logo_cima{
+    position: relative;
+    top: 20px;
+    padding: 0 20px;
+    font-size: 5em;
+    color: #fff;
+    opacity: 20%;
+}
+
+.logo_baixo {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 4em;
+    color: #fff;
+    opacity: 20%;
+}
+
+img {
+    position: relative;
+    width: 640px;
+    right: 50px;
+    z-index: 1;
+    transform: rotate(-20deg);
+    /* background-color: rgba(184, 135, 11, 0.289); */
+}
+/* ----------------- end lado esquerdo
+ ----------------- */
+
+/* ----------------- lado direito
+ ----------------- */
+.lado_direito {
+    display: grid;
+    padding: 80px 30px;
+    grid-template-rows: 70px 40px 1.4fr 1fr;
+}
+
+.titulo_marca {
+    font-size: 3em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    /* background-color: coral; */
+}
+
+.estilo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    opacity: 50%;
+    /* background-color: burlywood; */
+}
+
+.descricao {
+    position: relative;
+    padding: 0 0 0 30px;
+    font-size: 20px;
+    /* background-color: cyan; */
+}
+
+.preco_compra {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    /* background-color: rgb(255, 0, 234); */
+}
+
+.preco_compra h1 {
+    opacity: 50%;
+}
+
+button {
+    width: 130px;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    background: #09c409;
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    font-weight: 700;
+    box-shadow: none;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0de10d;
+}
+/* ----------------- end lado direito
+ ----------------- */
+
+@media (max-width: 1170px) {
+    .titulo_marca {
+        font-size: 2.5em;
+    }
+
+    .estilo {
+        font-size: 14px;
+    }
+    
+    .descricao {
+        font-size: 18px;
+    }
+
+    .preco_compra h1 {
+        font-size: 27px;
+    }
+    
+    button {
+        width: 120px;
+        height: 40px;
+        font-size: 14px;
+    }
+}
+
+
+/* ----------------- quebra de coluna esquerda e direita
+ ----------------- */
+@media (max-width: 1106px) {
+    .container {
+        max-width: 550px;
+        height: auto;
+        margin: 80px 30px;
+        display: block;
+    }
+
+    /* ----------------- lado esquerdo
+ ----------------- */
+    .lado_esquerdo {
+        height: 550px;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    img {
+        width: 100%;
+        bottom: 80px;
+        right: 0px;
+        transform: rotate(0deg);
+    }
+    /* ----------------- end lado esquerdo
+ ----------------- */
+
+    /* ----------------- lado direito
+ ----------------- */
+    .lado_direito {
+        padding: 20px 10px;
+        grid-template-rows: 75px 40px 200px 100px;
+    }
+    
+    .descricao {
+        padding: 0 0 0 0;
+    }
+    /* ----------------- end lado direito
+ ----------------- */
+}
+/* ----------------- end quebra de coluna esquerda e direita
+ ----------------- */
+
+ @media (max-width: 631px) {
+    .container {
+        max-width: 400px;
+        margin: 50px 10px;
+    }
+
+    /* ----------------- lado esquerdo
+ ----------------- */
+    .lado_esquerdo {
+        height: 400px;
+    }
+
+    .lado_esquerdo .logo_cima{
+        padding: 0 0;
+        text-align: center;
+        font-size: 4em;
+    }
+    
+    .logo_baixo {
+        font-size: 3em;
+    }
+
+    img {
+        width: 370px;
+        bottom: 60px;
+        right: -15px;
+    }
+    /* ----------------- end lado esquerdo
+ ----------------- */
+
+    /* ----------------- lado direito
+ ----------------- */
+    .lado_direito {
+        padding: 20px 10px;
+        grid-template-rows: 45px 30px 150px 60px;
+    }
+
+    .titulo_marca {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .estilo {
+        text-align: center;
+        font-size: 14px;
+    }
+    
+    .descricao {
+        font-size: 16px;
+    }
+
+    .preco_compra h1 {
+        font-size: 23px;
+    }
+    
+    button {
+        width: 90px;
+        height: 30px;
+        font-size: 12px;
+    }
+    /* ----------------- end lado direito
+ ----------------- */
+ }
+
+ @media (max-width: 440px) {
+    .container {
+        max-width: 100%;
+        margin: 0 0;
+    }
+    /* ----------------- lado esquerdo
+ ----------------- */
+    .lado_esquerdo {
+        height: 300px;
+    }
+
+    .lado_esquerdo .logo_cima{
+        font-size: 3em;
+    }
+    
+    .logo_baixo {
+        font-size: 2em;
+    }
+
+    img {
+        width: 270px;
+        bottom: 30px;
+        right: -25px;
+    }
+    /* ----------------- end lado esquerdo
+ ----------------- */
+
+    /* ----------------- lado direito
+ ----------------- */
+    .lado_direito {
+        padding: 10px 10px;
+        grid-template-rows: 45px 30px 170px 40px;
+    }
+
+    .titulo_marca {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .estilo {
+        text-align: center;
+        font-size: 14px;
+    }
+    
+    .descricao {
+        font-size: 16px;
+    }
+
+    .preco_compra h1 {
+        font-size: 23px;
+    }
+    
+    button {
+        width: 90px;
+        height: 30px;
+        font-size: 12px;
+    }
+    /* ----------------- end lado direito
+ ----------------- */
+ }
