@@ -269,7 +269,10 @@ button:hover {
     img {
         width: 270px;
         bottom: 30px;
-        right: -25px;
+        top: 50%;
+        left: 50%;
+        margin-top: -175px;
+        margin-left: -135px;
     }
     /* ----------------- end lado esquerdo
  ----------------- */
